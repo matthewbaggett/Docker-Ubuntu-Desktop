@@ -30,6 +30,8 @@ ADD noVNC /noVNC/
 ADD nginx.conf /etc/nginx/sites-enabled/default
 ADD startup.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
+RUN mkdir /home/ubuntu/.vnc
+ADD vncpasswd /home/ubuntu/.vnc/passwd
 
 EXPOSE 6080
 WORKDIR /root
