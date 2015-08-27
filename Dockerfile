@@ -1,5 +1,5 @@
-FROM ubuntu:14.04.2
-MAINTAINER Doro Wu <fcwu.tw@gmail.com>
+FROM ubuntu:trusty
+MAINTAINER Matthew Baggett <matthew@baggett.me> @matthewbaggett
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
