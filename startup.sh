@@ -8,6 +8,7 @@ PASS=ubuntu
 # echo "Username: ubuntu Password: $PASS"
 id -u ubuntu &>/dev/null || useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu
 echo "ubuntu:$PASS" | chpasswd
+mkdir /home/ubuntu/.vnc
 cp /vncpasswd /home/ubuntu/.vnc/passwd
 
 cd /web && ./run.py > /var/log/web.log 2>&1 &
